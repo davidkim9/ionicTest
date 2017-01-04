@@ -1,0 +1,31 @@
+<ion-content padding>
+  <div class="content">
+    <div class="contentBg"></div>
+
+    <div class="innerContent" (swipe)="pan($event)">
+      <div class="barContainer">
+        <div class="topBarBg" [@topBarState]="topbarVisible ? 'visible' : 'hidden'">
+          <div class="topBarContent" [@topBarContentState]="topbarVisible ? 'visible' : 'hidden'">
+            <img src="assets/icon/dismiss.png" (click)="nextPage($event)"/>
+            <img src="assets/icon/notrelevant.png"/>
+            <img src="assets/icon/gotitcovered.png"/>
+          </div>
+        </div>
+      </div>
+      <div class="copyContent">
+        <h1>Owe Money?</h1>
+        <p>
+          You could potentially lower some payments by 17%.
+        </p>
+        <h6>We can show you how.</h6>
+      </div>
+      <div class="barContainer">
+        <div class="bottomBar" [@topBarState]="topbarVisible ? 'hidden' : 'visible'">
+          <div class="topBarContent">
+            <img height="100" src="assets/icon/second.png" (click)="nextPage($event)"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
